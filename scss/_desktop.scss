@@ -1,10 +1,12 @@
 /* Container */
+
 .container {
     width: 960px;
     margin: 0 auto;
 } // end container
 
 /* Header */
+
 header {
     text-align: center;
     height: 66vh;
@@ -41,16 +43,15 @@ header {
     .navbar {
         display: block;
         float: right;
-
         ul li {
             display: inline-block;
-            padding: 1.25rem 0 .25rem 2.5rem;            
-
+            padding: 1.25rem 0 .25rem 2.5rem;
             a {
                 color: $primary-color;
                 text-decoration: none;
+                text-transform: uppercase;
                 font-weight: $bold-font;
-                font-size: .6em;
+                font-size: .75em;
                 padding-bottom: .75em;
                 transition: all 0.2s ease-in-out;
             } // end a
@@ -61,12 +62,13 @@ header {
         } // end ul li
     } // end navbar
 } // end header
-
 #scroll-btn {
     display: none;
 }
 
+
 /* Main */
+
 main {
     width: 100%;
     height: auto;
@@ -74,61 +76,64 @@ main {
     text-align: left;
     margin-top: 80px;
     .container:first-of-type {
+        height: auto;
         img {
+            padding-top: 20px;
             width: 38%;
             float: left;
         }
         h1 {
-            width: 55%;
-            float: left;
-            font-size: 1.25em;
-            margin: 40px 0 10px 50px;
+            width: 40%;
+            float: right;
+            font-size: 20px;
+            margin: 40px 0 10px 150px;
         }
         p {
-            float: left;
+            float: right;
             font-size: 14px;
-            line-height: 25px;
+            line-height: 32px;
             width: 385px;
             margin-left: 50px;
         }
     }
     .container:nth-of-type(2) {
+        height: auto;
+        padding: 0;
+        margin-top: 150px;
         img {
             width: 38%;
             float: right;
-            margin-top: 50px;
+            margin-top: 102px;
         }
         h1 {
             width: 45%;
-            float: right;
-            font-size: 1.25em;
+            float: left;
+            font-size: 20px;
             margin: 120px 0 10px 0;
         }
         p {
-            float: right;
+            float: left;
+            font-family: 'Noto Sans', sans-serif;
             font-size: 14px;
-            line-height: 25px;
-            width: 385px;
-            margin-right: 50px;
+            line-height: 32px;
+            width: 355px;
+            margin-right: 78px;
         }
     }
 } // end main
 
 /* Footer */
+
 footer {
     width: 100%;
     height: auto;
+    min-height: 75vh;
     h1 {
-        font-size: 3em;
-        padding-top: 25vh;
+        font-size: 5em;
+        padding-top: 35vh;
     }
     #contact-btn {
-        font-size: .5em;
-    }
-    .social {
-        margin-top: 10vh;
-    }
-    #copyright {
-        margin-top: 5%;
+        font-size: .75em;
+        margin-top: 4vh;
     }
 }

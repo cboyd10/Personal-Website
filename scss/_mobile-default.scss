@@ -41,7 +41,9 @@ body {
 header {
     position: relative;
     width: 100%;
-    height: 100vh; // overflow-x: hidden;
+    height: 100vh;
+    min-height: 470px;
+     // overflow-x: hidden;
     background: $primary-gradient, $bg-img;
     background-position: center;
     background-size: cover;
@@ -49,13 +51,13 @@ header {
     #logo {
         display: inline-block;
         margin: 3.52vh 0 0 6.25vw;
-        width: 33vw;
+        width: 124px;
     } // end logo
     #open-nav-btn {
         background: transparent;
         border: none;
         padding: 0;
-        width: 10vw;
+        width: 37.5px;
         position: absolute;
         top: 2.55vh;
         right: 6.25vw;
@@ -64,23 +66,29 @@ header {
         }
     } // end open-nav-btn
     #design-hero-text {
-        width: 60vw;
+        width: 225px;
+        height: auto;
         display: block;
         margin: 0 auto;
         margin-top: 15vh;
     } // end design-hero-text
+    .type-wrapper {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;   
+        text-align: center;     
+    }
     #type {
-        font-family: $primary-font;
-        font-size: 14.0625vw;
+        font-family: $ternary-font;
+        font-size: 52px;
         font-weight: $light-font;
         color: $primary-color;
-        margin-left: 18vw;
     } // end type
     .typed-cursor {
         opacity: 1;
         animation: showCursor 6.6s, blink 1.0s infinite 6.5s;
-        font-size: 14.0625vw;
-        font-family: $primary-font;
+        font-size: 52px;
+        font-family: $ternary-font;
         color: $primary-color;
     } // end typed-cursor (TypedJS)
     .navbar {
@@ -90,7 +98,7 @@ header {
 #scroll-btn {
     display: inline-block;
     position: absolute;
-    top: 71vh;
+    top: 18%;
     left: 50vw;
     transform: translate(-50%)
 } // end scroll-btn
@@ -99,29 +107,36 @@ header {
 
 main {
     width: calc(100% - 30vw);
-    height: calc(100vh - 4vh);
     text-align: center;
-    font-size: .75rem;
-    line-height: 1.25rem;
-    padding: 2vh 15vw;
+    font-size: .8rem;
+    line-height: 32px;;
+    padding: 10vh 15vw;
     #content-start {
         scroll-behavior: smooth;
     }
+    .container:first-of-type {
+        height: 90vh;
+        min-height: 425px;
+    }
+    .container:nth-of-type(2) {
+        padding-top: 15vh;
+    }
     img {
-        width: 75%;
+        width: 100%;
     }
     h1 {
         width: 100%;
-        font-size: 1.125rem;
+        font-size: 1.5rem;
+        font-family: $ternary-font;
         font-weight: $normal-font;
-        margin: 1vh 0 2vh 0;
+        margin: 4vh 0 2vh 0;
     }
     #design-content-title {
         font-family: $secondary-font;
     }
-    p:first-of-type {
-        width: 100%;
-        margin-bottom: 4vh;
+    p {
+        font-family: 'Noto Sans', sans-serif;
+        color: #777;
     }
 } // end main
 
@@ -154,20 +169,24 @@ footer {
         border-radius: 100em;
     }
     .social {
-        margin-top: 10vh;
+        width: 100%;
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
         a {
             text-decoration: none;
         }
     }
     #copyright {
-        width: 70%;
-        margin: 0 auto;
-        margin-top: 22%;
-        padding-bottom: 5px;
+        width: 100%;
+        position: absolute;
+        bottom: 2%;
+        left: 50%;
+        transform: translateX(-50%);
         color: $primary-color;
-        z-index: 2;
         font-size: 12px;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: $primary-font;
     }
 } // end footer
 
@@ -274,9 +293,9 @@ footer {
 
 // Font Resizings & Touch ups
 @media only screen and (min-width: 414px) {
-    html {
-        font-size: 1.25em;
-    }
+    // html {
+    //     font-size: 1.25em;
+    // }
     footer .social {
         margin-top: 24%;
     }
