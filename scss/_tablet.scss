@@ -3,17 +3,7 @@
 }
 
 /* Main */
-// main {
-//     font-size: 1em;
-//     line-height: 1.5em;
-//     h1 {
-//         font-size: 2.5em;
-//         margin: 2vh 0 4vh 0;
-//     }
-//     h1:nth-of-type(2) {
-//         font-size: 2.1em;
-//     }
-// } // end main
+
 main {
     box-sizing: border-box;
     width: 100%;
@@ -83,3 +73,5 @@ footer {
         margin-top: 15%;
     }
 }
+
+@import 'contact/_contact-tablet.scss'

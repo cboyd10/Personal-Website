@@ -169,6 +169,13 @@ footer {
         display: inline-block;
         margin-top: 6vh;
         border-radius: 100em;
+        transition: all 0.25s ease-in-out;
+    }
+    #contact-btn:hover {
+        background: $primary-color;
+        color: $secondary-color;
+        border: 2px solid $secondary-color;
+        font-size: .85em;
     }
     .social {
         width: 100%;
@@ -178,6 +185,16 @@ footer {
         transform: translateX(-50%);
         a {
             text-decoration: none;
+
+            svg {
+                width: 50px;
+                transition: all 0.2s ease-in-out;
+            }
+            svg:hover {
+                width: 60px;
+                height: 60px;
+                fill: $primary-color;
+            }
         }
     }
     #copyright {

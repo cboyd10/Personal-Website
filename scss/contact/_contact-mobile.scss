@@ -17,8 +17,7 @@ body#contact-page {
     } // end header
     /* Main */
     main {
-        background-image: url('/assets/about-bg.png');
-        // background-size: cover;
+        background-image: url('/assets/about-bg.png'); // background-size: cover;
         box-sizing: border-box;
         min-height: 83.75vh;
         margin: 0;
@@ -79,16 +78,44 @@ body#contact-page {
         min-height: 65px;
         background: $primary-color;
         clip-path: none;
-
         .social {
-            bottom: 45%;
-            a embed {
+            bottom: 35%;
+            a svg {
                 width: 25px;
                 height: 25px;
+                transition: all 0.2s ease-in-out;
+            }
+            a svg:hover {
+                width: 35px;
+                height: 35px;
             }
         }
         #copyright {
             color: $ternary-color;
         }
+    }
+    .alert {
+        box-sizing: border-box;
+        padding: .75rem 1.25rem;
+        margin-bottom: 1rem;
+        border: 1px solid transparent;
+        border-radius: .25rem;
+        width: 100%;
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 12px;
+    }
+    .alert strong {
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .alert-danger {
+        background-color: #f2dede;
+        border-color: #ebcccc;
+        color: #c73030;
+    }
+    .alert-success {
+        background-color: #dff0d8;
+        border-color: #d0e9c6;
+        color: #3c763d;
     }
 }
