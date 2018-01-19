@@ -117,8 +117,10 @@ main {
     .container:first-of-type {
         height: 90vh;
         min-height: 425px;
+        visibility: hidden;
     }
     .container:nth-of-type(2) {
+        visibility: hidden;
         padding-top: 15vh;
     }
     img {
@@ -300,3 +302,5 @@ footer {
         margin-top: 24%;
     }
 }
+
+@import 'contact/contact-mobile';

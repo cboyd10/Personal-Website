@@ -15,9 +15,10 @@
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Source+Code+Pro:300,400,900|Noto+Sans:400,700" rel="stylesheet">
     <title>Chris Boyd</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animate.css">
 </head>
 
-<body>
+<body id="index">
     <div class="collapsed-nav" id="collapsed-nav">
         <a href="#" class="close-nav-btn" onclick="closeNav()">&times;</a>
         <a href="#">Portfolio</a>
@@ -38,7 +39,7 @@
                         <a href="">About</a>
                     </li>
                     <li>
-                        <a href="">Contact</a>
+                        <a href="/contact.html">Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -144,14 +145,14 @@
         </svg>
     </a>
     <main class="clearfix" id="content-start">
-        <div class="container clearfix">
+        <div class="container clearfix" id="design-content-container">
             <img src="assets/design-content-holder.svg" alt="">
             <h1 id="design-content-title">Design</h1>
             <p id="design-content">As it would turn out, nobody outside of the programming community appreciates well written code-that is, unless
                 there is an unique and creative design that the code is implementing. This is why I am committed to delivering
                 great quality designs to my clients.</p>
         </div>
-        <div class="container clearfix">
+        <div class="container clearfix" id="develop-content-container">
             <img src="assets/develop-content-holder.svg" alt="">
             <h1 id="develop-content-title">Develop</h1>
             <p id="develop-content">Unusual as it may be, I love solving problems. Implementing code allows me to constantly challenge and puch myself
@@ -161,7 +162,7 @@
     </main>
     <footer class="clearfix">
         <h1 class="text-shadow" id="contact-title">Get In Touch</h1>
-        <a href="#" id="contact-btn">Contact Me</a>
+        <a href="/contact.html" id="contact-btn">Contact Me</a>
         <div class="social">
             <a href="#" class="social-btn">
                 <embed src="assets/linkedin.svg" alt="">
@@ -196,6 +197,39 @@
                 loop: false,
                 startDelay: 6000
             });
+
+
+            function amountscrolled() {
+                var winheight = $(window).height()
+                var docheight = $(document).height()
+                var scrollTop = $(window).scrollTop()
+                var trackLength = docheight - winheight
+                var pctScrolled = Math.floor(scrollTop / trackLength * 100) // gets percentage scrolled (ie: 80 NaN if tracklength == 0)
+                // console.log(pctScrolled + '% scrolled')
+
+                // Mobile 
+                if ((winheight < 1024) && (pctScrolled < 15)) {
+                    $("#design-content-container").removeClass("animated fadeInUp").css('visibility', 'hidden');
+                    $("#develop-content-container").removeClass("animated fadeInUp").css('visibility', 'hidden');
+                } else if ((winheight < 1024) && (pctScrolled >= 15) && (pctScrolled < 50)) {
+                    $("#design-content-container").addClass("animated fadeInUp").css('visibility', 'visible');
+                } else if ((winheight < 1024) && (pctScrolled >= 52)) {
+                    $("#develop-content-container").addClass("animated fadeInUp").css('visibility', 'visible');
+                }
+
+                // Tablet && Desktop
+                if ((winheight = 1024) && (pctScrolled < 15)) {
+                    $("#design-content-container").removeClass("animated fadeInUp").css('visibility', 'hidden');
+                    $("#develop-content-container").removeClass("animated fadeInUp").css('visibility', 'hidden');
+                } else if ((winheight = 1024) && (pctScrolled >= 25) && (pctScrolled < 50)) {
+                    $("#design-content-container").addClass("animated fadeInUp").css('visibility', 'visible');
+                    $("#develop-content-container").addClass("animated fadeInUp").css('visibility', 'visible');
+                }
+            }
+
+            $(window).on("scroll", function () {
+                amountscrolled()
+            })
 
             // Add smooth scrolling to all links
             $("a").on('click', function (event) {

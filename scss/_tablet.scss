@@ -23,6 +23,8 @@ main {
     margin-top: 150px;
     .container:first-of-type {
         height: auto;
+    min-height: 350px;
+        
         img {
             padding-top: 50px;
             width: 38%;
@@ -45,7 +47,7 @@ main {
     .container:nth-of-type(2) {
         height: auto;
         padding: 0;
-        margin-top: 250px;
+        margin-top: 50px;
         img {
             width: 38%;
             float: right;
