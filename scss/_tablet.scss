@@ -2,6 +2,7 @@
     top: 72vh;
 }
 
+
 /* Main */
 
 main {
@@ -13,12 +14,19 @@ main {
     margin-top: 150px;
     .container:first-of-type {
         height: auto;
-    min-height: 350px;
-        
+        min-height: 350px;
+        position: relative;
         img {
             padding-top: 50px;
             width: 38%;
             float: left;
+        }
+        div {
+            width: 30%;
+            position: absolute;
+            top: 15%;
+            left: 5%;
+            z-index: 2;
         }
         h1 {
             width: 53.5%;
@@ -43,6 +51,13 @@ main {
             float: right;
             margin-top: 125px;
         }
+        div {
+            width: 30%;
+            position: absolute;
+            top: 48%;
+            left: 68%;
+            z-index: 2;
+        }
         h1 {
             width: 45%;
             float: left;
@@ -61,6 +76,7 @@ main {
 } // end main
 
 /* Footer */
+
 footer {
     h1 {
         font-size: 5em;

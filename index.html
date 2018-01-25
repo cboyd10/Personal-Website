@@ -147,6 +147,7 @@
     <main class="clearfix" id="content-start">
         <div class="container clearfix" id="design-content-container">
             <img src="assets/design-content-holder.svg" alt="">
+            <div id="design-animation"></div>
             <h1 id="design-content-title">Design</h1>
             <p id="design-content">As it would turn out, nobody outside of the programming community appreciates well written code-that is, unless
                 there is an unique and creative design that the code is implementing. This is why I am committed to delivering
@@ -154,7 +155,7 @@
         </div>
         <div class="container clearfix" id="develop-content-container">
             <img src="assets/develop-content-holder.svg" alt="">
-            <div id="bm"></div>
+            <div id="develop-animation  "></div>
             <h1 id="develop-content-title">Develop</h1>
             <p id="develop-content">Unusual as it may be, I love solving problems. Implementing code allows me to constantly challenge and puch myself
                 to solve problems and make a client's design come to life. I strive to write code that matches the quality
@@ -309,7 +310,14 @@
         });
 
         var animation = bodymovin.loadAnimation({
-            container: document.getElementById('bm'),
+            container: document.getElementById('develop-animation'),
+            renderer: 'svg',
+            autoplay: true,
+            loop: true,
+            path: '/test/data.json'
+        });
+        var animation = bodymovin.loadAnimation({
+            container: document.getElementById('design-animation'),
             renderer: 'svg',
             autoplay: true,
             loop: true,

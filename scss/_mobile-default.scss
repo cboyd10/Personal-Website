@@ -118,13 +118,22 @@ main {
         height: 90vh;
         min-height: 425px;
         visibility: hidden;
+        position: relative;
+        div {
+            width: 66%;
+            // height: 125px;
+            position: absolute;
+            top: 7%;
+            left: 20%;
+            z-index: 2;
+        }
     }
     .container:nth-of-type(2) {
         visibility: hidden;
         padding-top: 15vh;
         position: relative;
         div {
-            width: 175px;
+            width: 66%;
             // height: 125px;
             position: absolute;
             top: 25%;
